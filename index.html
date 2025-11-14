@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026新聯合軍條約 - Union Army & Huajun</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 1rem;
+        }
+        .lang-btn {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+        /* Banner样式 */
+        .banner {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-align: center;
+            padding: 3rem 5%;
+            margin-bottom: 2rem;
+        }
+        .banner h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .banner p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        /* 容器样式 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            margin-bottom: 3rem;
+        }
+        /* 卡片样式 */
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        .card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* 成员页样式 */
+        .member-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .member-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        /* 页脚样式 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        /* 隐藏未激活语言 */
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        /* 勾选框样式 */
+        .agreement-box {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #ffebee; /* 红色系浅背景 */
+            border: 1px solid #ef5350; /* 红色边框 */
+            border-radius: 8px;
+        }
+        .agreement-label {
+            display: inline-block;
+            padding: 8px 12px;
+            background: white;
+            border: 1px solid #ef5350; /* 红色边框 */
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+            color: #c62828; /* 红色文字 */
+        }
+        /* 截图提示样式 */
+        .screenshot-tip {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            background: #ef5350; /* 红色背景 */
+            border-left: 4px solid #b71c1c; /* 深红色边框 */
+            border-radius: 4px;
+            color: white; /* 白色文字提高可读性 */
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">新聯合軍條約</div>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="zh-cn">简体中文</button>
+            <button class="lang-btn" data-lang="zh-tw">繁體中文</button>
+        </div>
+    </nav>
+
+    <!-- Banner区域 -->
+    <div class="banner">
+        <h1 class="lang-content active" data-lang="zh-cn">2026年新联合军条约</h1>
+        <h1 class="lang-content" data-lang="zh-tw">2026年新聯合軍條約</h1>
+        <p class="lang-content active" data-lang="zh-cn">Union Army & Huajun | 保留所有权利</p>
+        <p class="lang-content" data-lang="zh-tw">Union Army & Huajun | 保留所有權利</p>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 条约详情卡片 -->
+        <div class="card">
+            <h2 class="lang-content active" data-lang="zh-cn">条约完整内容</h2>
+            <h2 class="lang-content" data-lang="zh-tw">條約完整內容</h2>
+            
+            <!-- 简体中文内容 -->
+            <div class="lang-content active" data-lang="zh-cn">
+                <h3>1. 组织架构</h3>
+                <p>仅设双会长（<span class="highlight">單刀华军乄HIM彡</span> & <span class="highlight">Brine归来.</span>）统筹，不设层级首领，所有成员地位平等。</p>
+                
+                <h3>2. 行为规范</h3>
+                <p>延续原联合军（Union Army）、华军（Huajun）战斗属性，具体包含：</p>
+                <ul>
+                    <li><strong>PVP</strong>：以约定对战对象为目标，开展公平合规的玩家对战活动；</li>
+                    <li><strong>休息</strong>：成员可自主安排休整时间，不强制参与非核心活动；</li>
+                    <li><strong>指令</strong>：规范使用游戏指令，仅用于协作对战、活动组织等合理场景；</li>
+                    <li><strong>红石</strong>：鼓励运用红石技术搭建战术装置、攻防设施，助力对战开展；</li>
+                    <li><strong>跑酷</strong>：支持成员开展跑酷技能训练，提升对战机动性与活动趣味性；</li>
+                    <li><strong>建筑</strong>：可进行攻防阵地搭建、基地建设等相关创作，严禁破坏非对战目标成果；</li>
+                </ul>
+                <p>所有活动均禁止恶意引战，仅针对约定对战对象开展合规对抗。</p>
+                
+                <h3>3. 退队规则</h3>
+                <p>自愿退队需提前告知双会长，违规退队者6月内不得重新申请。</p>
+                
+                <h3>4. 版权声明</h3>
+                <p>本联合军（Union Army）、华军（Huajun）的名称、规则体系均为原创，严禁他人盗用、抄袭或仿冒使用；Union Army & Huajun, all rights reserved.</p>
+            </div>
+            
+            <!-- 繁体中文内容 -->
+            <div class="lang-content" data-lang="zh-tw">
+                <h3>1. 組織架構</h3>
+                <p>僅設雙會長（<span class="highlight">單刀華軍乄HIM彡</span> & <span class="highlight">Brine歸來.</span>）統籌，不設階層首領，所有成員地位平等。</p>
+                
+                <h3>2. 行為規範</h3>
+                <p>延續原聯合軍（Union Army）、華軍（Huajun）戰鬥屬性，具體包含：</p>
+                <ul>
+                    <li><strong>PVP</strong>：以約定對戰對象為目標，開展公平合規的玩家對戰活動；</li>
+                    <li><strong>休息</strong>：成員可自主安排休整時間，不強制參與非核心活動；</li>
+                    <li><strong>指令</strong>：規範使用遊戲指令，僅用於協作對戰、活動組織等合理場景；</li>
+                    <li><strong>紅石</strong>：鼓勵運用紅石技術搭建戰術裝置、攻防設施，助力對戰開展；</li>
+                    <li><strong>跑酷</strong>：支持成員開展跑酷技能訓練，提升對戰機動性與活動趣味性；</li>
+                    <li><strong>建築</strong>：可進行攻防陣地搭建、基地建設等相關創作，嚴禁破壞非對戰目標成果；</li>
+                </ul>
+                <p>所有活動均禁止惡意引戰，僅針對約定對戰對象開展合規對抗。</p>
+                
+                <h3>3. 退隊規則</h3>
+                <p>自願退隊需提前告知雙會長，違規退隊者6月內不得重新申請。</p>
+                
+                <h3>4. 版權聲明</h3>
+                <p>本聯合軍（Union Army）、華軍（Huajun）的名稱、規則體系均為原創，嚴禁他人盜用、抄襲或仿冒使用；Union Army & Huajun, all rights reserved.</p>
+            </div>
+
+            <!-- 同意勾选框+截图提示（支持语言切换） -->
+            <div class="agreement-box">
+                <label class="agreement-label" data-lang="zh-cn">
+                    <input type="checkbox" name="agreement" value="agreed" style="margin-right: 8px;">
+                    已阅读并同意本条约全部内容
+                </label>
+                <label class="agreement-label" data-lang="zh-tw" style="display: none;">
+                    <input type="checkbox" name="agreement" value="agreed" style="margin-right: 8px;">
+                    已閱讀並同意本條約全部內容
+                </label>
+                
+                <!-- 截图提示 -->
+                <div class="screenshot-tip lang-content active" data-lang="zh-cn">
+                    ⚠️ 提示：勾选同意后，请截图保存本页面，作为加入联合军的凭证。
+                </div>
+                <div class="screenshot-tip lang-content" data-lang="zh-tw" style="display: none;">
+                    ⚠️ 提示：勾選同意後，請截圖保存本頁面，作為加入聯合軍的憑證。
+                </div>
+            </div>
+        </div>
+
+        <!-- 成员公示卡片（仅保留双会长） -->
+        <div class="card">
+            <h2 class="lang-content active" data-lang="zh-cn">成员公示</h2>
+            <h2 class="lang-content" data-lang="zh-tw">成員公示</h2>
+            
+            <div class="member-list">
+                <div class="member-card">
+                    <h3 class="lang-content active" data-lang="zh-cn">双会长</h3>
+                    <h3 class="lang-content" data-lang="zh-tw">雙會長</h3>
+                    <p>單刀华军乄HIM彡</p>
+                    <p>Brine归来.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p class="lang-content active" data-lang="zh-cn">2026新联合军条约 © Union Army & Huajun 版权所有</p>
+        <p class="lang-content" data-lang="zh-tw">2026新聯合軍條約 © Union Army & Huajun 版權所有</p>
+    </footer>
+
+    <!-- 语言切换脚本 -->
+    <script>
+        // 获取语言按钮和所有双语元素
+        const langBtns = document.querySelectorAll('.lang-btn');
+        const langContents = document.querySelectorAll('.lang-content');
+        const agreementLabels = document.querySelectorAll('.agreement-label');
+
+        // 切换语言函数
+        function switchLang(lang) {
+            // 移除所有激活状态
+            langBtns.forEach(btn => btn.classList.remove('active'));
+            langContents.forEach(content => content.classList.remove('active'));
+            agreementLabels.forEach(label => label.style.display = 'none');
+            
+            // 激活当前语言
+            document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
+            document.querySelectorAll(`.lang-content[data-lang="${lang}"]`).forEach(content => content.classList.add('active'));
+            document.querySelector(`.agreement-label[data-lang="${lang}"]`).style.display = 'inline-block';
+        }
+
+        // 绑定按钮点击事件
+        langBtns[0].addEventListener('click', () => switchLang('zh-cn'));
+        langBtns[1].addEventListener('click', () => switchLang('zh-tw'));
+
+        // 初始化默认语言（简体中文）
+        switchLang('zh-cn');
+    </script>
+</body>
+</html>
